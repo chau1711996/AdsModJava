@@ -13,6 +13,7 @@ import com.google.android.ads.nativetemplates.TemplateView;
 
 import java.util.ArrayList;
 
+import dev.chau.adsmodjava.AdsManager;
 import dev.chau.adsmodjava.R;
 
 public class VerticalFragment extends Fragment {
@@ -27,7 +28,18 @@ public class VerticalFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_vertical, container, false);
+
+        templateView = view.findViewById(R.id.templateVer);
+        rcvVer = view.findViewById(R.id.rcvVer);
+
+        setUpAdsNative();
+
         return view;
+    }
+
+    private void setUpAdsNative() {
+        AdsManager adsManager = AdsManager.getInstance(getContext(), TAG);
+        adsManager.loadNative("ca-app-pub-3940256099942544/2247696110", templateView);
     }
 
 }
