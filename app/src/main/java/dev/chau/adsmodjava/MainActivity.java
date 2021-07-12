@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     private void initAdsMod(){
         adsManager = AdsManager.getInstance(this, TAG);
         adsManager.loadBanner(mAdView);
+        adsManager.setInterstitial("ca-app-pub-3940256099942544/1033173712");
     }
 
     private void initViewPager(){
@@ -48,6 +49,19 @@ public class MainActivity extends AppCompatActivity {
 
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(), getLifecycle());
         viewPager.setAdapter(viewPagerAdapter);
+
+        viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            int dem = 0;
+            @Override
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+                dem++;
+                if(dem == 3){
+                    adsManager.showInterstitial(MainActivity.this);
+                    dem = 0;
+                }
+            }
+        });
 
         new TabLayoutMediator(tabLayout, viewPager,
                 (tab, position) ->
