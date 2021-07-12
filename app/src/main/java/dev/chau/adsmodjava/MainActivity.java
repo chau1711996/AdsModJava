@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     ViewPager2 viewPager;
     TabLayout tabLayout;
     AdView mAdView;
+    AdsManager adsManager;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,12 @@ public class MainActivity extends AppCompatActivity {
         mAdView = findViewById(R.id.adView);
 
         initViewPager();
+        initAdsMod();
+    }
+
+    private void initAdsMod(){
+        adsManager = AdsManager.getInstance(this, TAG);
+        adsManager.loadBanner(mAdView);
     }
 
     private void initViewPager(){
