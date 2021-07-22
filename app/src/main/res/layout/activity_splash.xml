@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_margin="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashActivity">
+
+    <TextView
+        android:id="@+id/textSplash"
+        android:text="NO COMENT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnClickShowAds"
+        android:text="CLick Show Ads"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/btnClickTwoFunc"
+        android:text="CLick OK Cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        app:layout_constraintTop_toBottomOf="@id/btnClickTwoFunc"
+        android:id="@+id/btnClickOneFunc"
+        android:text="CLick OK"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@id/btnClickOneFunc"
+        android:id="@+id/btnClickShowPopup"
+        android:text="Click Show Popup "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@id/btnClickShowPopup"
+        android:id="@+id/btnClickGoogleMap"
+        android:text="Click Show Google Map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@id/btnClickGoogleMap"
+        android:id="@+id/btnClickService"
+        android:text="Click Show Service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@id/btnClickService"
+        android:id="@+id/btnClickShowPopupMenu"
+        android:text="Click Show Popup Menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

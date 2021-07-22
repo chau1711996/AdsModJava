@@ -1,4 +1,4 @@
-package dev.chau.adsmodjava;
+package dev.chau.adsmodjava.Utils;
 
 import android.app.Activity;
 import android.content.Context;

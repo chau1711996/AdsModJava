@@ -13,7 +13,7 @@ import com.google.android.ads.nativetemplates.TemplateView;
 
 import java.util.ArrayList;
 
-import dev.chau.adsmodjava.AdsManager;
+import dev.chau.adsmodjava.Utils.AdsManager;
 import dev.chau.adsmodjava.R;
 
 public class ItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
